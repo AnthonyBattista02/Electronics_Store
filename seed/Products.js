@@ -5,7 +5,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 const products = [
     {
-        name: "Smartphone",
+        name: "Smart-phone",
         description: "6.5-inch OLED display, 128GB storage, dual-camera system.",
         price: 699.99,
         category: "Mobile Devices",
