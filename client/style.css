@@ -1,9 +1,26 @@
+*{
+    margin: auto;
+}
 h1{
     display: flex;
     justify-content: center;
+}
+#categories{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
 }
 
 
 #product-container{
     display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 1em; 
+}
+.product{
+    border: 2px solid black;
+    height: 140px;
+    width: 140px;
+    margin-top: 1em;
+
 }
