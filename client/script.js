@@ -3,7 +3,24 @@ const category2 = document.querySelector('#cat2')
 const category3 = document.querySelector('#cat3')
 const category4 = document.querySelector('#cat4')
 const enter = document.querySelector(`#enter`)
+// async function fetchProducts() {
+//     try {
+//         const response = await fetch('http://localhost:3001/products');
+//         const products = await response.json();
+//         // Render products in the frontend
+//     } catch (error) {
+//         console.error('Failed to fetch products:', error);
+//     }
+// }
+// console.log(fetchProducts)
 
+async function getProducts () {
+    const response = await axios.get('http://localhost:3001/products')
+
+    console.log(response)
+}
+
+getProducts()
 
 const allProducts = [{name: "ex1", img: ".https://www.foodnetwork.com/content/dam/images/food/fullset/2021/02/05/Baked-Feta-Pasta-4_s4x3.jpg"}, 
 {name: "ex2", img: ".https://www.foodnetwork.com/content/dam/images/food/fullset/2021/02/05/Baked-Feta-Pasta-4_s4x3.jpg"}, 
