@@ -24,6 +24,7 @@ const displayAll = (currentProducts) => {
         } 
     }
     for (i = 1; i <= currentProducts.length; i++) {
+        const container = document.getElementById('product-container')
         const product = document.createElement('div')
         product.className = 'product'
         product.id = `product${i}`
@@ -31,7 +32,7 @@ const displayAll = (currentProducts) => {
             `<img src=${currentProducts[i-1].img}> 
             <h3>TONY</h3>
             <button id="addToCart">Add To Cart</button>`
-        document.body.appendChild(product)
+        container.appendChild(product)
     isDisplayed = true
     lastLength = currentProducts.length
     }
