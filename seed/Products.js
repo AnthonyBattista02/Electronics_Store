@@ -1,5 +1,5 @@
 const db = require('../db/index')
-const { Product } = require('../models/Products')
+const { Product } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
