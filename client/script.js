@@ -4,11 +4,15 @@ const category3 = document.querySelector('#cat3')
 const category4 = document.querySelector('#cat4')
 const enter = document.querySelector(`#enter`)
 
+async function getProducts() {
+    const response = await axios.get(`http://localhost:3001/products`)
+    
+    console.log(response.data)
+    return response.data
+}
 
-const allProducts = [{name: "ex1", img: ".https://www.foodnetwork.com/content/dam/images/food/fullset/2021/02/05/Baked-Feta-Pasta-4_s4x3.jpg"}, 
-{name: "ex2", img: ".https://www.foodnetwork.com/content/dam/images/food/fullset/2021/02/05/Baked-Feta-Pasta-4_s4x3.jpg"}, 
-{name: "ex3", img: ".https://www.foodnetwork.com/content/dam/images/food/fullset/2021/02/05/Baked-Feta-Pasta-4_s4x3.jpg"}, 
-{name: "ex4", img: ".https://www.foodnetwork.com/content/dam/images/food/fullset/2021/02/05/Baked-Feta-Pasta-4_s4x3.jpg"}]
+const allProducts = getProducts()
+console.log(allProducts)
 const cat1Products = [{name: "ex4"}, {name: "ex4"}]
 const cat2Products = [{name: "ex4"}, {name: "ex4"}]
 const cat3Products = [{name: "ex4"}, {name: "ex4"}]
@@ -29,14 +33,16 @@ const displayAll = (currentProducts) => {
         product.className = 'product'
         product.id = `product${i}`
         product.innerHTML = 
-            `<img src=${currentProducts[i-1].img}> 
-            <h3>TONY</h3>
+            `<img src=${currentProducts[i-1].imageURL}> 
+            <h3>${currentProducts[i-1].name}</h3>
+            <p>${currentProducts[i-1].description}</p>
+            <h4>$${currentProducts[i-1].price}</h4>
             <button id="addToCart">Add To Cart</button>`
         container.appendChild(product)
     isDisplayed = true
     lastLength = currentProducts.length
     }
-    return lastLength
+    
 }
 
 category1.onclick = () => {
@@ -57,7 +63,7 @@ enter.onclick = () => {
     console.log(textInput)
 }
     
-let products = displayAll(allProducts)
+displayAll(allProducts)
 
 document.body.addEventListener('click', (event) => {
     if (event.target && event.target.id === 'addToCart') {
@@ -65,11 +71,3 @@ document.body.addEventListener('click', (event) => {
         console.log(cart);
     }
 });
-
-
-// const addToCart = document.querySelector(`.addToCart`)
-// for (i = 0; i < products; i++)
-//     addToCart.onclick = () => {
-//         cart.push(addToCart.parentNode.id)
-//         console.log(cart)
-// }  
