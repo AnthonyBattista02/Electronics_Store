@@ -81,12 +81,10 @@ ul{
 #cart{
     background-color: transparent;
     border-color: white;
-    color: #24305e;
-    width: 80px;
-    height: 40px;
+    height: max-content;
+    width:max-content;
     display: flex;
     float: right;
-
 }
 #product-container{
     display: grid;
