@@ -14,7 +14,7 @@ const cat2Products = [{name: "ex4"}, {name: "ex4"}]
 const cat3Products = [{name: "ex4"}, {name: "ex4"}]
 const cat4Products = [{name: "ex4"}, {name: "ex4"}, {name: "ex4"}]
 let cart = []
-
+let lastLength = 0;
 isDisplayed = false
 const displayAll = (currentProducts) => {
     if (isDisplayed == true) {
@@ -59,10 +59,17 @@ enter.onclick = () => {
     
 let products = displayAll(allProducts)
 
+document.body.addEventListener('click', (event) => {
+    if (event.target && event.target.id === 'addToCart') {
+        cart.push(event.target.parentNode.id);
+        console.log(cart);
+    }
+});
 
-const addToCart = document.querySelector(`.addToCart`)
-for (i = 0; i < products; i++)
-    addToCart.onclick = () => {
-        cart.push(addToCart.parentNode.id)
-        console.log(cart)
-}  
+
+// const addToCart = document.querySelector(`.addToCart`)
+// for (i = 0; i < products; i++)
+//     addToCart.onclick = () => {
+//         cart.push(addToCart.parentNode.id)
+//         console.log(cart)
+// }  
