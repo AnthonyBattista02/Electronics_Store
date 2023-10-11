@@ -1,8 +1,9 @@
-const db = require('../db')
-const { Product } = require('../models')
+const db = require('../db/index')
+const { Product } = require('../models/Products')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
+const main = async () => {
 const products = [
     {
         name: "Smart-phone",
@@ -77,3 +78,13 @@ const products = [
 ];
 
 module.exports = products;
+
+await Product.insertMany(products)
+console.log("Prodcuts created!")
+}
+const run = async () => {
+await main()
+db.close()
+}
+
+run()
