@@ -22,11 +22,13 @@ app.get('/products', productsController.getAllProducts)
 
 app.get('/products/:id', productsController.getOneProduct)
 
-app.post('/products', productsController.createProducts)
+app.get('/products/category/:categoryName', productsController.getProductByCategory)
 
-app.put('/products/:id', productsController.updateProducts)
+// app.post('/products', productsController.createProducts)
 
-app.delete('/products/:id', productsController.deleteProducts)
+// app.put('/products/:id', productsController.updateProducts)
+
+// app.delete('/products/:id', productsController.deleteProducts)
 
 
 app.listen(PORT, () => {
