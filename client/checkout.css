@@ -22,15 +22,10 @@ h1{
     margin-bottom: .5em;
     color: rgba(42, 74, 155, 0.804);
     font-family: 'Tilt Neon', sans-serif;
-
-    /* font-family: 'Pixelify Sans', sans-serif; */
     font-size: 4em;
     padding-left: 7%;
     text-align: center;
     letter-spacing: 0.5em;
-
-
-
 }
 input{
     background-color: white;
@@ -47,6 +42,92 @@ ul{
     display: flex;
     list-style-type: none;
 }
+footer{
+    margin-top:2em;
+    padding: 4em;
+    background-color: #24305e;
+    text-align: center;
+}
+#cartItems{
+    flex-direction: column;
+    align-items: center;
+    margin: 3px 20%;
+}
+.item{
+    text-align: center;
+    font-size: 13px;
+    height: 120px;
+    width: 120%;
+    margin-bottom: 4px;
+    background-color: white;
+    color:#24305e;
+}
+
+
+
+
+
+
+
+#product-image{
+    height: 110px;
+    width: 110px;
+    border: none;
+    background-color: #24305e;
+    float: left;
+    margin: 5px;
+}
+#product-name{
+    height: 110px;
+    width: 110px;
+    border: none;
+    background-color: #24305e;
+    float: left;
+    margin: 5px;
+}
+#product-price{
+    height: 110px;
+    width: 110px;
+    border: none;
+    color: #24305e;
+    font-size: 1.25em;
+    float: right;
+    margin: 5px;
+}
+#nums-of-itms{
+    height: 110px;
+    width: 110px;
+    border: none;
+    background-color: #24305e;
+    float: left;
+    margin: 5px;
+}
+#subtotal{
+    text-align: center;
+    font-size: 13px;
+    height: 90px;
+    width: 120%;
+    margin-bottom: 4px;
+    background-color: white;
+    color:#24305e;
+}
+#total{
+    float: left;
+    color: #24305e;
+    margin: 2% 18%;
+    font-size: 2em;
+}
+#totalnum{
+    float: right;
+    color: #24305e;
+    margin: 2% 25%;
+    font-size: 1.5em;
+}
+
+
+
+
+
 
 
 
@@ -70,10 +151,20 @@ ul{
 }
 #cart{
     background-color: transparent;
-    border-color: white;
+    border: none;
     height: max-content;
     width:max-content;
     display: flex;
     float: right;
     margin: 8px;
+}
+@media(max-width: 800px){
+    h1{
+        font-size: 30px;
+    }
+    #cart{
+        position: absolute;
+        top: 6em;
+        right: 1em;
+    }
 }

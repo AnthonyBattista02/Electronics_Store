@@ -82,7 +82,7 @@ ul{
 }
 #cart{
     background-color: transparent;
-    border-color: white;
+    border: none;
     height: max-content;
     width:max-content;
     display: flex;
@@ -110,7 +110,7 @@ ul{
     height: 40px;
     width: 120px;
     margin: 2px;
-   color: rgb(3, 3, 105);
+    color: rgb(3, 3, 105);
     border: none;
     margin-block-start: auto;
     background-color: whitesmoke;
