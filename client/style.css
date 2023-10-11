@@ -30,7 +30,9 @@ h1{
     font-family: 'Tilt Neon', sans-serif;
 
     /* font-family: 'Pixelify Sans', sans-serif; */
-    font-size: 3em;
+    font-size: 4em;
+    padding-left: 7%;
+    text-align: center;
     letter-spacing: 0.5em;
 
 
@@ -85,6 +87,7 @@ ul{
     width:max-content;
     display: flex;
     float: right;
+    margin: 8px;
 }
 #product-container{
     display: grid;
@@ -92,9 +95,6 @@ ul{
     margin-top: 1em; 
     margin-bottom: 2em;
 }
-
-
-
 .product{
     border: 4px solid white;
     background-color: white;
@@ -104,7 +104,7 @@ ul{
     height: 180px;
     width: 180px;
     margin-top: 1em;
-    box-shadow: 1px 1px 3px black;
+    box-shadow: 1px 1px 4px lightslategray;
 }
 .cat{
     height: 40px;
@@ -115,10 +115,14 @@ ul{
     margin-block-start: auto;
     background-color: whitesmoke;
 }
-@media (min-width:1023px) {
-    h1{
-        font-size: 70px;
-        text-align: center;
+@media (min-width: 2000px) {
+    #product-container{ 
+        grid-template-columns: auto auto auto auto auto auto auto;
+    }
+}
+@media (max-width: 1999px) {
+    #product-container{ 
+        grid-template-columns: auto auto auto auto auto;
     }
 }
 @media (max-width: 1023px) {
@@ -134,9 +138,35 @@ ul{
 @media (max-width: 800px) {
 #product-container{ grid-template-columns: auto auto auto auto;}
 h1{
-    font-size: 60px;
+    font-size: 30px;
     margin-bottom: 20px;
     text-align: center;
+}
+input{
+    width: 15em;
+}
+#categories{
+    flex-direction: column;
+    align-items: center;
+}
+.cat{
+    font-size: 13px;
+    height: fit-content;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2px;
+}
+#product-container{
+   grid-template-columns: auto auto auto;
+   
+}
+.product{
+    width: 180px;
+}
+ul{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 }
 @media (max-width: 540px) {
@@ -154,8 +184,8 @@ h1{
     @media (max-width: 414px) {
         #product-container{ grid-template-columns: auto;}
         .product{
-            height: 10em;
-            width: 10em;
+            height: 18em;
+            width: 18em;
             background-color: white;
             border: 1px solid white;
             box-shadow: none;
@@ -166,10 +196,33 @@ h1{
             text-align: center;
         }
         input{
-            width: 80px;
+            width: 120px;
         }
+        #cart{
+            position: absolute;
+            top: 6em;
+        }
+
+        #cart:focus{
+             -webkit-animation:test_XY 1s 1s ease both;
+             
+
+        }
+        @-webkit-keyframes test_XY {
+            0%{ -webkit-transform:translateX(1em)}
+            100%{ -webkit-transform:translateX(22em)}
+            }
+
+
+
+
         footer{
-            
+        font-size: 16px;
+        }
+        ul{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
         }
 
         }
