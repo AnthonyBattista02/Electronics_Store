@@ -1,7 +1,7 @@
 *{
     margin: auto;
     color: white;
-    font-family: 'Tilt Neon', sans-serif;
+    font-family: 'Playfair Display', serif;
 
 }
 body{
@@ -21,8 +21,8 @@ h1{
     padding-top: .5em;
     margin-bottom: .5em;
     color: rgba(42, 74, 155, 0.804);
-    font-family: 'Tilt Neon', sans-serif;
-    font-size: 4em;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
     padding-left: 7%;
     text-align: center;
     letter-spacing: 0.5em;
@@ -52,6 +52,7 @@ footer{
     flex-direction: column;
     align-items: center;
     margin: 3px 20%;
+
 }
 .item{
     text-align: center;
@@ -75,15 +76,23 @@ footer{
     border: none;
     background-color: #24305e;
     float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 5px;
 }
 #product-name{
     height: 110px;
-    width: 110px;
+    width: 350px;
+    font-size: 1.5em;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #24305e;
     float: left;
     margin: 5px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 #product-price{
     height: 110px;
@@ -93,6 +102,9 @@ footer{
     font-size: 1.25em;
     float: right;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #nums-of-itms{
     height: 110px;
@@ -101,6 +113,10 @@ footer{
     background-color: #24305e;
     float: left;
     margin: 5px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #subtotal{
     text-align: center;
@@ -129,8 +145,6 @@ footer{
 
 
 
-
-
 #categories{
     display: flex;
     justify-content: center;
@@ -149,22 +163,64 @@ footer{
     color: #24305e;
     width: 50px;
 }
-#cart{
+#home{
     background-color: transparent;
     border: none;
     height: max-content;
     width:max-content;
     display: flex;
-    float: right;
+    float: left;
     margin: 8px;
 }
 @media(max-width: 800px){
     h1{
-        font-size: 30px;
-    }
-    #cart{
-        position: absolute;
-        top: 6em;
-        right: 1em;
+        font-size: 3em;
     }
 }
+
+@media (max-width: 1023px) {
+    h1{
+        font-size: 3em;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #product-name{
+        width: 200px;
+    }
+}
+@media (max-width: 800px) {
+    h1{
+        font-size: 2em;
+    }
+    ul{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+    #cartItems{
+        flex-direction: column;
+        align-items: center;
+        margin: 3px 10%;
+    }
+    #product-name{
+        width: 120px;
+    }
+    #product-price{
+        width: 80px;
+    }
+    #nums-of-itms{
+        width: 50px;
+    }
+}
+@media (max-width: 540px) {
+
+}
+@media (max-width: 414px) {
+
+}
+
+
+
+
+
+
