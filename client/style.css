@@ -8,18 +8,9 @@ body{
     background-color: whitesmoke;
 }
 header{
-    /* background-image: url("https://thumbs.dreamstime.com/z/computer-mainboard-motherboard-high-resolution-detail-main-board-focused-processor-79840407.jpg"); */
     background-position: center;
-    /* background-image: url("https://img.freepik.com/premium-photo/abstract-background-technical-design-printed-circuit-boardgenerative-ai_76964-10830.jpg"); */
-    /* background-color: #24305e;
-    background-repeat: no-repeat;
-    background-size: cover; */
     padding-bottom: .5em;
     border: 2px solid whitesmoke;
-    /* box-shadow: inset 0 0 50px 10px rgba(255, 255, 255); */
-    /* mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0));
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0)); */
-  
 }
 h1{
     display: flex;
@@ -28,15 +19,10 @@ h1{
     margin-bottom: .5em;
     color: rgba(42, 74, 155, 0.804);
     font-family: 'Tilt Neon', sans-serif;
-
-    /* font-family: 'Pixelify Sans', sans-serif; */
-    font-size: 4em;
+    font-size: 2.5em;
     padding-left: 7%;
     text-align: center;
     letter-spacing: 0.5em;
-
-
-
 }
 input{
     background-color: white;
@@ -98,10 +84,9 @@ ul{
 .product{
     border: 4px solid white;
     background-color: white;
-    color: black;
     text-align: center;
     border-radius: 5px;
-    height: 180px;
+    height: 260px;
     width: 180px;
     margin-top: 1em;
     box-shadow: 1px 1px 4px lightslategray;
@@ -115,6 +100,38 @@ ul{
     margin-block-start: auto;
     background-color: whitesmoke;
 }
+
+#productImage{
+    height: 140px;
+    width: 180px;
+    margin-top: 0px;
+    border: transparent;
+    border-radius: 5px;
+}
+#productName{
+color:#24305e;
+max-height: 23px;
+font-size: 18px;
+}
+#productDescription{
+    margin-top: 18px;
+    color:#24305e;
+    font-size: 11px;;
+}
+#productPrice{
+    margin-top: 5px;
+    color:#24305e;
+}
+.addToCart{
+    color: white;
+    height: 19px;
+    width: 180px;
+    font-size: 11px;
+    margin-top: 5px;
+    border: transparent;
+    background-color: #24305e;
+}
+
 @media (min-width: 2000px) {
     #product-container{ 
         grid-template-columns: auto auto auto auto auto auto auto;
@@ -127,7 +144,7 @@ ul{
 }
 @media (max-width: 1023px) {
     h1{
-        font-size: 70px;
+        font-size: 2.5em;
         margin-bottom: 30px;
         text-align: center;
     }
@@ -138,7 +155,7 @@ ul{
 @media (max-width: 800px) {
 #product-container{ grid-template-columns: auto auto auto auto;}
 h1{
-    font-size: 30px;
+    font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -200,18 +217,11 @@ ul{
         }
         #cart{
             position: absolute;
-            top: 6em;
+            top: 11em;
+            right: 1em;
         }
 
-        #cart:focus{
-             -webkit-animation:test_XY 1s 1s ease both;
-             
 
-        }
-        @-webkit-keyframes test_XY {
-            0%{ -webkit-transform:translateX(1em)}
-            100%{ -webkit-transform:translateX(22em)}
-            }
 
 
 

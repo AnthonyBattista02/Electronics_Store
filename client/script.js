@@ -77,10 +77,10 @@ const displayAll = (currentProducts) => {
         product.className = 'product'
         product.id = `product${i}`
         product.innerHTML = 
-            `<img src=${currentProducts[i-1].imageURL}> 
-            <h3>${currentProducts[i-1].name}</h3>
-            <p>${currentProducts[i-1].description}</p>
-            <h4>$${currentProducts[i-1].price}</h4>
+            `<img id="productImage" src=${currentProducts[i-1].imageURL}> 
+            <h3 id="productName">${currentProducts[i-1].name}</h3>
+            <p id="productDescription">${currentProducts[i-1].description}</p>
+            <h4 id="productPrice">$${currentProducts[i-1].price}</h4>
             <button class="addToCart" data-product-id="${currentProducts[i-1]._id}" >Add To Cart</button>`
         container.appendChild(product)
     isDisplayed = true
