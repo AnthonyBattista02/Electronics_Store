@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', async function() {
         const product = response.data;
         const productDiv = document.createElement('div');
         productDiv.innerHTML = `
-        <img src="${product.imageURL}" alt="${product.name}">
-        <h2>${product.name}</h2>
-        <p>${product.description}</p>
-        <p>Price: $${product.price.toFixed(2)}</p>
-        <button onclick="removeFromCart('${product._id}')">Remove</button>
+        <img id="productImage" src="${product.imageURL}" alt="${product.name}">
+        <h2 id="productName">${product.name}</h2>
+        <p id="productDescription">${product.description}</p>
+        <p id="productPrice">Price: $${product.price.toFixed(2)}</p>
+        <button class="removeFromCart" onclick="removeFromCart('${product._id}')">Remove</button>
     `;
         cartItemsContainer.appendChild(productDiv);
         subtotal += parseFloat(product.price);
