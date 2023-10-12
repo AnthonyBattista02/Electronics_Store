@@ -1,7 +1,7 @@
 *{
     margin: auto;
     color: white;
-    font-family: 'Tilt Neon', sans-serif;
+    font-family: 'Playfair Display', serif;
 
 }
 body{
@@ -21,8 +21,8 @@ h1{
     padding-top: .5em;
     margin-bottom: .5em;
     color: rgba(42, 74, 155, 0.804);
-    font-family: 'Tilt Neon', sans-serif;
-    font-size: 4em;
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
     padding-left: 7%;
     text-align: center;
     letter-spacing: 0.5em;
@@ -76,6 +76,9 @@ footer{
     border: none;
     background-color: #24305e;
     float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 5px;
 }
 #product-name{
@@ -83,6 +86,9 @@ footer{
     width: 350px;
     font-size: 1.5em;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #24305e;
     float: left;
     margin: 5px;
@@ -96,6 +102,9 @@ footer{
     font-size: 1.25em;
     float: right;
     margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #nums-of-itms{
     height: 110px;
@@ -105,6 +114,9 @@ footer{
     float: left;
     margin: 5px;
     font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #subtotal{
     text-align: center;
@@ -162,13 +174,13 @@ footer{
 }
 @media(max-width: 800px){
     h1{
-        font-size: 30px;
+        font-size: 3em;
     }
 }
 
 @media (max-width: 1023px) {
     h1{
-        font-size: 70px;
+        font-size: 3em;
         margin-bottom: 30px;
         text-align: center;
     }
