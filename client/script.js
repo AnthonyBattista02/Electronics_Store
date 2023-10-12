@@ -119,7 +119,7 @@ allCategories.onclick = async() => {
 enter.onclick = async() => {
     let textInput = document.querySelector("#inputText").value
     console.log(textInput)
-    allProducts = await getProducts()
+    allProducts = await getProductsByName()
     for (i = 0; i < allProducts.length; i++) {
         console.log(allProducts[i])
         if (textInput == allProducts[i].name) {

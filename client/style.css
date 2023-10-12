@@ -224,10 +224,18 @@ ul{
             top: 11em;
             right: 1em;
         }
-
-
-
-
+        #productImage{
+            width: 100%;
+        }
+        .addToCart{
+            height: fit-content;
+            font-size: 15px;
+            margin-top: 1em;
+        }
+        #categories{
+            position: sticky;
+            top: 0px;
+        }
 
 
         footer{
