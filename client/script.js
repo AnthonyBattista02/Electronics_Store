@@ -3,18 +3,6 @@ const category2 = document.querySelector('#cat2')
 const category3 = document.querySelector('#cat3')
 const category4 = document.querySelector('#cat4')
 const enter = document.querySelector(`#enter`)
-<<<<<<< HEAD
-// async function fetchProducts() {
-//     try {
-//         const response = await fetch('http://localhost:3001/products');
-//         const products = await response.json();
-//         // Render products in the frontend
-//     } catch (error) {
-//         console.error('Failed to fetch products:', error);
-//     }
-// }
-// console.log(fetchProducts)
-=======
 let allProducts
 
 async function getProducts() {
@@ -30,7 +18,6 @@ async function yes() {
     displayAll(allProducts)
 }
 yes()
->>>>>>> cfb93807bfc1acd33ed6f173cbf38a2611fa962a
 
 async function getProducts () {
     const response = await axios.get('http://localhost:3001/products')
