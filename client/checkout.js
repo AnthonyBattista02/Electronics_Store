@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         <button class="removeFromCart" onclick="removeFromCart('${product._id}')">Remove</button>
     `;
         cartItemsContainer.appendChild(productDiv);
+     
         subtotal += parseFloat(product.price);
     }
     subtotalContainer.innerHTML = `Subtotal: $${subtotal.toFixed(2)}`;
