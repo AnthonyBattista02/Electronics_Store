@@ -9,7 +9,9 @@ https://lucid.app/lucidchart/8b9c378c-d288-4db5-9962-22a29f84cda4/edit?beaconFlo
 ### How it works:
 A user can find items by search or by category. The user can then add a desired product to his/her shopping cart by pressing the "add to cart" button. He/she can then click on the shopping cart icon to see all of the items that they have added, and if desired, can checkout with their products.
 ![Wireframe](Wireframe-Ecommerce-site.jpg)
-![Ecommerce Site](e-commerce-site.png)
+![Ecommerce Site](./images/e-commerce-site.png)
+
+
 ### Languages used:
 - HTML
 - CSS
