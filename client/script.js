@@ -116,9 +116,16 @@ allCategories.onclick = async() => {
     displayAll(allProducts)
 }
 
-enter.onclick = () => {
+enter.onclick = async() => {
     let textInput = document.querySelector("#inputText").value
     console.log(textInput)
+    allProducts = await getProducts()
+    for (i = 0; i < allProducts.length; i++) {
+        console.log(allProducts[i])
+        if (textInput == allProducts[i].name) {
+            displayAll(allProducts[i])
+        }
+    }
 }
     
 document.body.addEventListener('click', (event) => {
@@ -128,5 +135,3 @@ document.body.addEventListener('click', (event) => {
         console.log('Cart:', cart)
     }
 })
-
-
