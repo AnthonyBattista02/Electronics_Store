@@ -138,6 +138,7 @@ document.body.addEventListener('click', (event) => {
         const productId = event.target.getAttribute('data-product-id')
         cart.push(productId)
         console.log('Cart:', cart)
+        localStorage.setItem('cart', JSON.stringify(cart));
         redDot = document.getElementById(`redDot`)
         redDot.style.visibility = 'visible'
     }
