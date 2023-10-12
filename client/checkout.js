@@ -36,7 +36,6 @@ function removeFromCart(productId) {
     if (index > -1) {
         cart.splice(index, 1);
     }
-    // Update the cart in local storage
     localStorage.setItem('cart', JSON.stringify(cart));
 
     // Remove the product div from the cartItemsContainer
@@ -62,7 +61,6 @@ function updateSubtotal() {
     let subtotal = 0;
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     for (let productId of cart) {
-        // Assuming you have a global products array or similar
         const product = products.find(p => p._id === productId);
         if (product) {
             subtotal += parseFloat(product.price);
