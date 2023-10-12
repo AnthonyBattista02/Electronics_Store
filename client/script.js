@@ -11,37 +11,32 @@ let cat1Data
 let cat2Data
 let cat3Data
 let cat4Data
+let cart = []
 
 async function getProducts() {
     const response = await axios.get(`http://localhost:3001/products`)
     return response.data
 }
-
 async function getCat1() {
     const response = await axios.get(`http://localhost:3001/products/category/Mobile%20Devices`)
     return response.data
 }
-
 async function getCat2() {
     const response = await axios.get(`http://localhost:3001/products/category/Accessories`)
     return response.data
 }
-
 async function getCat3() {
     const response = await axios.get(`http://localhost:3001/products/category/Audio`)
     return response.data
 }
-
 async function getCat4() {
     const response = await axios.get(`http://localhost:3001/products/category/Gaming`)
     return response.data
 }
-
 async function getCat5() {
     const response = await axios.get(`http://localhost:3001/products/category/Photography`)
     return response.data
 }
-
 async function getCat6() {
     const response = await axios.get(`http://localhost:3001/products/category/Wearables`)
     return response.data
@@ -56,10 +51,6 @@ async function yes() {
 yes()
 
 
-const cat2Products = [{name: "ex4"}, {name: "ex4"}]
-const cat3Products = [{name: "ex4"}, {name: "ex4"}]
-const cat4Products = [{name: "ex4"}, {name: "ex4"}, {name: "ex4"}]
-let cart = []
 let lastLength = 0;
 isDisplayed = false
 
@@ -125,18 +116,18 @@ allCategories.onclick = async() => {
     displayAll(allProducts)
 }
 
-enter.onclick = () => {
+enter.onclick = async() => {
     let textInput = document.querySelector("#inputText").value
     console.log(textInput)
+    allProducts = await getProducts()
+    for (i = 0; i < allProducts.length; i++) {
+        console.log(allProducts[i])
+        if (textInput == allProducts[i].name) {
+            displayAll(allProducts[i])
+        }
+    }
 }
     
-
-
-// document.body.addEventListener('click', (event) => {
-//     if (event.target && event.target.className === 'addToCart') {
-//         cart.push(event.target.parentNode.id)
-//         console.log(cart)
-//     }
 document.body.addEventListener('click', (event) => {
     if (event.target && event.target.classList.contains('addToCart')) {
         const productId = event.target.getAttribute('data-product-id')
@@ -144,5 +135,3 @@ document.body.addEventListener('click', (event) => {
         console.log('Cart:', cart)
     }
 })
-
-
