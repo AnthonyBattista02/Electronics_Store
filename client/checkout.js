@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     const subtotalContainer = document.getElementById('subtotal');
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let subtotal = 0;
-    for (let productId of cart) {
+    for (let i = 0; i < cart.length; i++) {
+        let productId = cart[i];
         console.log("Fetching product with ID:", productId);
         const response = await axios.get(`http://localhost:3001/products/${productId}`);
         const product = response.data;
