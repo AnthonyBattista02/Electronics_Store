@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', async function() {
     const cartItemsContainer = document.getElementById('cartItems');
     const subtotalContainer = document.getElementById('subtotal');
+    
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let subtotal = 0;
-    for (let i = 0; i < cart.length; i++) {
-        let productId = cart[i];
+  
+    for (let productId of cart) {
         console.log("Fetching product with ID:", productId);
         const response = await axios.get(`http://localhost:3001/products/${productId}`);
         const product = response.data;
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     subtotalContainer.innerHTML = `Subtotal: $${subtotal.toFixed(2)}`;
 });
+
 function removeFromCart(productId) {
     // Get the current cart from local storage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];

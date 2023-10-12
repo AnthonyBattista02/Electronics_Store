@@ -132,11 +132,25 @@ enter.onclick = async() => {
         console.log("No products matched the search.");
     }
 }
+
+// enter.onclick = async() => {
+//     let textInput = document.querySelector("#inputText").value
+//     console.log(textInput)
+//     allProducts = await getProducts()
+    
+//     for (i = 0; i < allProducts.length; i++) {
+//         console.log(allProducts[i])
+//         if (textInput == allProducts[i].name) {
+//             displayAll(allProducts[i])
+//         }
+//     }
+// }
     
 document.body.addEventListener('click', (event) => {
     if (event.target && event.target.classList.contains('addToCart')) {
         const productId = event.target.getAttribute('data-product-id')
         cart.push(productId)
+        localStorage.setItem('cart', JSON.stringify(cart));
         console.log('Cart:', cart)
         localStorage.setItem('cart', JSON.stringify(cart));
         redDot = document.getElementById(`redDot`)

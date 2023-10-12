@@ -74,6 +74,77 @@ const products = [
         price: 49.99,
         category: "Wearables",
         imageURL: "/images/tracker.jpg"
+    },
+
+    {
+        name: "Ultra-Slim Smartphone",
+        description: "5.5-inch OLED display, 64GB storage, single-camera system.",
+        price: 599.99,
+        category: "Mobile Devices",
+        imageURL: "/images/ultra-slim-smartphone.jpg"
+    },
+    {
+        name: "Gaming Laptop",
+        description: "17-inch display, 16GB RAM, 512GB SSD, Intel i7 processor, RTX 3060 GPU.",
+        price: 1499.99,
+        category: "Computers",
+        imageURL: "/images/gaming-laptop.jpg"
+    },
+    {
+        name: "Wireless Earbuds",
+        description: "In-ear, noise-cancelling, up to 15 hours of playback with charging case.",
+        price: 129.99,
+        category: "Audio",
+        imageURL: "/images/earbuds.jpg"
+    },
+    {
+        name: "Fitness Smartwatch",
+        description: "Heart rate monitor, GPS, waterproof, sleep tracking, notifications.",
+        price: 279.99,
+        category: "Wearables",
+        imageURL: "/images/fitness-smartwatch.jpg"
+    },
+    {
+        name: "Mirrorless Camera",
+        description: "20MP, 4K video recording, interchangeable lenses.",
+        price: 749.99,
+        category: "Photography",
+        imageURL: "/images/mirrorless-camera.jpg"
+    },
+    {
+        name: "Portable Gaming Console",
+        description: "Handheld, includes built-in games, 720p display.",
+        price: 199.99,
+        category: "Gaming",
+        imageURL: "/images/portable-console.jpg"
+    },
+    {
+        name: "Pro Tablet",
+        description: "12-inch display, 128GB storage, stylus included, keyboard support.",
+        price: 799.99,
+        category: "Mobile Devices",
+        imageURL: "/images/pro-tablet.jpg"
+    },
+    {
+        name: "Smart Soundbar",
+        description: "Voice-controlled, integrates with smart home devices, superior audio quality.",
+        price: 199.99,
+        category: "Audio",
+        imageURL: "/images/soundbar.jpg"
+    },
+    {
+        name: "Magnetic Phone Mount",
+        description: "Attach to car's vent, magnetic grip, rotates 360 degrees.",
+        price: 19.99,
+        category: "Accessories",
+        imageURL: "/images/magnetic-mount.jpg"
+    },
+    {
+        name: "Advanced Fitness Tracker",
+        description: "Step counter, sleep tracking, heart rate monitor, GPS, waterproof.",
+        price: 99.99,
+        category: "Wearables",
+        imageURL: "/images/advanced-tracker.jpg"
     }
 ];
 
