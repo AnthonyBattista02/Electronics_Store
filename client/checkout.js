@@ -4,18 +4,18 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let subtotal = 0;
-    
+  
     for (let productId of cart) {
         console.log("Fetching product with ID:", productId);
         const response = await axios.get(`http://localhost:3001/products/${productId}`);
         const product = response.data;
         const productDiv = document.createElement('div');
         productDiv.innerHTML = `
-        <img src="${product.imageURL}" alt="${product.name}">
-        <h2>${product.name}</h2>
-        <p>${product.description}</p>
-        <p>Price: $${product.price.toFixed(2)}</p>
-        <button onclick="removeFromCart('${product._id}')">Remove</button>
+        <img id="productImage" src="${product.imageURL}" alt="${product.name}">
+        <h2 id="productName">${product.name}</h2>
+        <p id="productDescription">${product.description}</p>
+        <p id="productPrice">Price: $${product.price.toFixed(2)}</p>
+        <button class="removeFromCart" onclick="removeFromCart('${product._id}')">Remove</button>
     `;
         cartItemsContainer.appendChild(productDiv);
         subtotal += parseFloat(product.price);

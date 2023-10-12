@@ -58,21 +58,25 @@ const displayAll = (currentProducts) => {
     if (isDisplayed == true) {
         for (i = 0; i < lastLength; i++) {
             let product = document.querySelector('.product')
-            product.parentNode.removeChild(product)
+            if (product) {
+                product.remove()
+            } else {
+                console.log("DNE")
+            }
         } 
     }
-    for (i = 1; i <= currentProducts.length; i++) {
+    for (i = 0; i < currentProducts.length; i++) {
         const container = document.getElementById('product-container')
         const product = document.createElement('div')
         console.log(`createelement`)
         product.className = 'product'
-        product.id = `product${i}`
+        product.id = `product${i+1}`
         product.innerHTML = 
-            `<img id="productImage" src=${currentProducts[i-1].imageURL}> 
-            <h3 id="productName">${currentProducts[i-1].name}</h3>
-            <p id="productDescription">${currentProducts[i-1].description}</p>
-            <h4 id="productPrice">$${currentProducts[i-1].price}</h4>
-            <button class="addToCart" data-product-id="${currentProducts[i-1]._id}" >Add To Cart</button>`
+            `<img id="productImage" src=${currentProducts[i].imageURL}> 
+            <h3 id="productName">${currentProducts[i].name}</h3>
+            <p id="productDescription">${currentProducts[i].description}</p>
+            <h4 id="productPrice">$${currentProducts[i].price}</h4>
+            <button class="addToCart" data-product-id="${currentProducts[i]._id}" >Add To Cart</button>`
         container.appendChild(product)
     isDisplayed = true
     lastLength = currentProducts.length
@@ -148,5 +152,8 @@ document.body.addEventListener('click', (event) => {
         cart.push(productId)
         localStorage.setItem('cart', JSON.stringify(cart));
         console.log('Cart:', cart)
+        localStorage.setItem('cart', JSON.stringify(cart));
+        redDot = document.getElementById(`redDot`)
+        redDot.style.visibility = 'visible'
     }
 })
