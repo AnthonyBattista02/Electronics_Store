@@ -7,8 +7,8 @@ This is an ecommerce store selling electronics. The site creates products in a m
 https://lucid.app/lucidchart/8b9c378c-d288-4db5-9962-22a29f84cda4/edit?beaconFlowId=46E1C12BC6307126&invitationId=inv_e0d4e53c-1528-4db8-90c9-9b6bdaed8988&page=0_0#
 
 ### How it works:
-A user can find items by search or by category. The user can then add a desired product to his/her shopping cart by pressing the "add to cart" button. He/she can then click on the shopping cart to see all items they have added, and if desired, can checkout with their products.
-
+A user can find items by search or by category. The user can then add a desired product to his/her shopping cart by pressing the "add to cart" button. He/she can then click on the shopping cart icon to see all of the items that they have added, and if desired, can checkout with their products.
+![Wireframe](Wireframe-Ecommerce-site.jpg)
 ![Ecommerce Site](e-commerce-site.png)
 ### Languages used:
 - HTML
