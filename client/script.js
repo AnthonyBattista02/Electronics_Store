@@ -117,21 +117,36 @@ allCategories.onclick = async() => {
 }
 
 enter.onclick = async() => {
-    let textInput = document.querySelector("#inputText").value
-    console.log(textInput)
-    allProducts = await getProducts()
-    for (i = 0; i < allProducts.length; i++) {
-        console.log(allProducts[i])
-        if (textInput == allProducts[i].name) {
-            displayAll(allProducts[i])
-        }
+    let textInput = document.querySelector("#inputText").value.trim().toLowerCase();
+    console.log(textInput);
+    allProducts = await getProducts();
+    const matchedProducts = allProducts.filter(product => product.name.toLowerCase().includes(textInput));
+    if (matchedProducts.length > 0) {
+        displayAll(matchedProducts);
+    } else {
+        // Handle the case where no products match the search
+        console.log("No products matched the search.");
     }
 }
+
+// enter.onclick = async() => {
+//     let textInput = document.querySelector("#inputText").value
+//     console.log(textInput)
+//     allProducts = await getProducts()
+    
+//     for (i = 0; i < allProducts.length; i++) {
+//         console.log(allProducts[i])
+//         if (textInput == allProducts[i].name) {
+//             displayAll(allProducts[i])
+//         }
+//     }
+// }
     
 document.body.addEventListener('click', (event) => {
     if (event.target && event.target.classList.contains('addToCart')) {
         const productId = event.target.getAttribute('data-product-id')
         cart.push(productId)
+        localStorage.setItem('cart', JSON.stringify(cart));
         console.log('Cart:', cart)
     }
 })
